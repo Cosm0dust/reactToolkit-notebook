@@ -1,0 +1,23 @@
+.button{
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    font-size: 2em;
+    color: #FFFFFF;
+    background: #0095ff;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+}
+
+.button > span{
+    display: inline-block;
+    transition: transform 0.5s;
+
+}
+
+.button:hover > span{
+    transform: rotate(180deg);
+}

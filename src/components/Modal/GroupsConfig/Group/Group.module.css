@@ -1,0 +1,86 @@
+.group{
+    display: flex;
+    width: 25em;
+    justify-content: space-between;
+    border: 1px solid  #0077cc;
+    padding: 0.5em;
+    border-radius: 30px;
+}
+
+.groupText> span{
+    font-size: 1.5rem;
+}
+
+.groupText > input{
+    font-size: 1.5rem;
+}
+
+.buttons{
+    display: flex;
+    gap: 0.2em;
+}
+
+.d_button{
+    height: 2em;
+    width: 1.5em;
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 800;
+    outline: 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.d_button:hover,
+.d_button:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF4742;
+}
+
+.d_button:active {
+    opacity: .5;
+}
+
+
+
+
+.e_button{
+    height: 2em;
+    width: 1.5em;
+    background:#0095ff;
+    border: 1px solid #0095ff;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 800;
+    outline: 0;
+    text-align: center;
+    font-size: 1rem;
+
+}
+
+.e_button:hover,
+.e_button:focus {
+    background-color: #07c;
+}
+
+.e_button:focus {
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.e_button:active {
+    background-color: #0064bd;
+    box-shadow: none;
+}
+
+

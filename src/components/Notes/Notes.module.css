@@ -1,0 +1,11 @@
+.notes{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80em;
+    margin: 2em 5em 0 10em;
+    gap: 1em;
+    align-self: flex-start;
+}
+
+
+

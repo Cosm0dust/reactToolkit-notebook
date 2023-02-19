@@ -1,23 +1,59 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from "./components/Header/Header";
+import Notes from "./components/Notes/Notes";
+import CreateButton from "./components/CreateButton/CreateButton";
+import NotesSearch from "./components/NotesSearch/NotesSearch";
+import {useState} from "react";
+import Modal from "./components/Modal/Modal";
+import React from "react";
+import NotesField from "./components/Modal/NotesField/NotesField";
+import GroupsConfig from "./components/Modal/GroupsConfig/GroupsConfig";
+import {useSelector} from "react-redux";
+import NotesSelect from "./components/NotesSearch/NoteSelect/NotesSelect";
 
 function App() {
-  return (
+    const groups = useSelector(state => state.notes.groups)
+    const [showNotesModal, setShowNotesModal] = useState(false)
+    const [showGroupsModal, setShowGroupsModal] = useState(false)
+    const [searchQuery, setSearchQuery]= useState('')
+    const [filter, setFilter] =useState('All')
+
+
+
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Header/>
+        <NotesSearch
+            setShowGroupsModal = {setShowGroupsModal}
+            searchQuery = {searchQuery}
+            setSearchQuery = {setSearchQuery}
+            filter = {filter}
+            setFilter = {setFilter}
+            groups = {groups}
+        />
+        <Notes filter={filter}/>
+        <CreateButton
+            modal = {showNotesModal}
+            setModal = {setShowNotesModal}
+        />
+        <Modal
+            modal ={showNotesModal}
+            setModal = {setShowNotesModal}
         >
-          Learn React
-        </a>
-      </header>
+            <NotesField
+                setModal={setShowNotesModal}
+            />
+        </Modal>
+        <Modal
+            filter={filter}
+            setFilter={setFilter}
+            modal ={showGroupsModal}
+            setModal = {setShowGroupsModal}
+        >
+            <GroupsConfig
+                setModal={setShowGroupsModal}
+            />
+        </Modal>
     </div>
   );
 }

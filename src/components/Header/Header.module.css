@@ -1,0 +1,11 @@
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    width: 100%;
+    font-size: 4rem;
+    background: rgb(0,95,255);
+    background: linear-gradient(90deg, rgba(0,95,255,1) 14%, rgba(0,202,255,1) 100%);
+    color: white;
+}
